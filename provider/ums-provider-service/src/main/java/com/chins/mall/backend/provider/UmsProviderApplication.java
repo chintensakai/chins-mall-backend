@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan(basePackages = {"com.chins.mall.backend.provider.mapper"})
-public class UmsProviderAApplicaation {
+public class UmsProviderApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(UmsProviderAApplicaation.class);
+    SpringApplication.run(UmsProviderApplication.class);
   }
 }

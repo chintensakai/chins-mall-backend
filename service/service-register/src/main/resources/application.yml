@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: service-register
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+dubbo:
+  scan:
+    base-packages: com.chins.mall.backend.service.controller
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+  registry:
+    address: nacos://127.0.0.1:8848
+
+server:
+  # ${random.int[9000,9999]} 随机端口
+  port: 9000

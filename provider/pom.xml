@@ -22,10 +22,10 @@
       <groupId>org.apache.dubbo</groupId>
       <artifactId>dubbo-registry-nacos</artifactId>
     </dependency>
-    <!--    <dependency>-->
-    <!--      <groupId>org.apache.dubbo</groupId>-->
-    <!--      <artifactId>dubbo-spring-boot-starter</artifactId>-->
-    <!--    </dependency>-->
+    <dependency>
+      <groupId>org.apache.dubbo</groupId>
+      <artifactId>dubbo-spring-boot-starter</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.apache.dubbo</groupId>
       <artifactId>dubbo-spring-boot-actuator</artifactId>
@@ -67,17 +67,10 @@
       <artifactId>spring-context-support</artifactId>
     </dependency>
 
-    <!-- Projects -->
-    <!--    <dependency>-->
-    <!--      <groupId>com.chins.mmshop.ult</groupId>-->
-    <!--      <artifactId>commons-provider</artifactId>-->
-    <!--      <version>${project.parent.version}</version>-->
-    <!--    </dependency>-->
-    <!--    <dependency>-->
-    <!--      <groupId>com.funtl.myshop.plus</groupId>-->
-    <!--      <artifactId>configuration-sentinel</artifactId>-->
-    <!--      <version>${project.parent.version}</version>-->
-    <!--    </dependency>-->
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-boot-starter</artifactId>
+    </dependency>
   </dependencies>
 
   <modules>

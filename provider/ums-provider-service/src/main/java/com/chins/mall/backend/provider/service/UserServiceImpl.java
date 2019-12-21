@@ -24,4 +24,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     return userMapper.selectList(null);
   }
 
+  @Override
+  public int insertUser(User user) {
+
+    return userMapper.insert(user);
+  }
+
 }

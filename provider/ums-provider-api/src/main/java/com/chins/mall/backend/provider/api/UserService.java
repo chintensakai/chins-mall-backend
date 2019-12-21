@@ -9,4 +9,6 @@ public interface UserService extends IService<User> {
   String echo(String s);
 
   List<User> selectAllUsers();
+
+  int insertUser(User user);
 }

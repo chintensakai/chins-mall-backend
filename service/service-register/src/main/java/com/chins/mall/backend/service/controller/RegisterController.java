@@ -5,6 +5,8 @@ import com.chins.mall.backend.provider.api.entity.User;
 import java.util.List;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -16,5 +18,10 @@ public class RegisterController {
   @GetMapping("/all-users")
   public List<User> getAllUsers() {
     return userService.selectAllUsers();
+  }
+
+  @PostMapping("/register")
+  public int userRegister(@RequestBody User user) {
+    return userService.insertUser(user);
   }
 }

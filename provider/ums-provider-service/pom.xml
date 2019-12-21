@@ -72,9 +72,9 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-<!--        <configuration>-->
-<!--          <mainClass>com.funtl.myshop.plus.provider.ProviderAdminApplication</mainClass>-->
-<!--        </configuration>-->
+        <!--        <configuration>-->
+        <!--          <mainClass>com.funtl.myshop.plus.provider.ProviderAdminApplication</mainClass>-->
+        <!--        </configuration>-->
       </plugin>
     </plugins>
   </build>

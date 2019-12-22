@@ -9,6 +9,19 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+  redis:
+    host: 192.168.0.102
+    port: 6379
+    database: 0
+    password: 123456
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
 
   datasource:
     url: jdbc:mysql://192.168.0.102:3306/oauth2?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false

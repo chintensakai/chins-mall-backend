@@ -6,3 +6,4 @@
 /provider/ums-provider-api/target/
 /service/service-register/target/
 /commons/commons-dto/target/
+/security/security.iml

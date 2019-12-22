@@ -21,6 +21,7 @@
     <module>provider</module>
     <module>service</module>
     <module>commons</module>
+    <module>security</module>
   </modules>
 
   <properties>

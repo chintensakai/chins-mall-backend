@@ -20,12 +20,7 @@
     <module>dependencies</module>
     <module>provider</module>
     <module>service</module>
-    <!--    <module>business</module>-->
-<!--    <module>commons</module>-->
-    <!--    <module>configuration</module>-->
-    <!--    <module>gateway</module>-->
-    <!--    <module>cloud</module>-->
-    <!--    <module>message</module>-->
+    <module>commons</module>
   </modules>
 
   <properties>

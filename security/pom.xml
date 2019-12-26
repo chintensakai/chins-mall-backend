@@ -16,6 +16,12 @@
       <groupId>com.alibaba.cloud</groupId>
     </dependency>
 
+    <dependency>
+      <groupId>com.chins.mall.backend</groupId>
+      <artifactId>commons-dto</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
   </dependencies>
 
   <modelVersion>4.0.0</modelVersion>

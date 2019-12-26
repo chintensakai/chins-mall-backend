@@ -33,6 +33,11 @@
       <artifactId>commons-pool2</artifactId>
       <groupId>org.apache.commons</groupId>
     </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <artifactId>pwd-credentials</artifactId>

@@ -48,6 +48,10 @@ dubbo:
   registry:
     address: nacos://127.0.0.1:8848
 
-
 server:
   port: 9001
+
+oauth2:
+  client_id: client
+  client_secret: secret
+  grant_type: password

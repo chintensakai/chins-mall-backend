@@ -8,13 +8,6 @@
       <artifactId>lombok</artifactId>
       <groupId>org.projectlombok</groupId>
     </dependency>
-
-    <dependency>
-      <groupId>com.squareup.okhttp3</groupId>
-      <artifactId>okhttp</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
   </dependencies>
 
   <modelVersion>4.0.0</modelVersion>
@@ -24,10 +17,10 @@
   </modules>
   <packaging>pom</packaging>
 
-  <parent>
-    <artifactId>parent</artifactId>
-    <groupId>com.chins.mall.backend</groupId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
+<!--  <parent>-->
+<!--    <artifactId>parent</artifactId>-->
+<!--    <groupId>com.chins.mall.backend</groupId>-->
+<!--    <version>0.0.1-SNAPSHOT</version>-->
+<!--  </parent>-->
 
 </project>

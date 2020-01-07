@@ -30,11 +30,11 @@
   </modules>
   <packaging>pom</packaging>
 
-  <parent>
-    <artifactId>parent</artifactId>
-    <groupId>com.chins.mall.backend</groupId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
+<!--  <parent>-->
+<!--    <artifactId>parent</artifactId>-->
+<!--    <groupId>com.chins.mall.backend</groupId>-->
+<!--    <version>0.0.1-SNAPSHOT</version>-->
+<!--  </parent>-->
 
 
 </project>

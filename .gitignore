@@ -1,10 +1,8 @@
 /chins-mall-backend.iml
 /.idea/
 /provider/provider.iml
-/provider/ums-provider-api/ums-provider-api.iml
-/provider/ums-provider-service/target/
-/provider/ums-provider-api/target/
-/service/service-register/target/
-/commons/commons-dto/target/
-/security/security.iml
-/security/pwd-credentials/target
+/dependencies/dependencies.iml
+/provider/provider-user-mgr-service/target/
+/provider/provider-user-mgr-api/target/
+/provider/provider-user-mgr-service/provider-user-mgr-service.iml
+/provider/provider-user-mgr-api/provider-user-mgr-api.iml

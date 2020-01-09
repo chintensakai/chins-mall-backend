@@ -1,12 +1,12 @@
-package com.chins.mall.backend.service;
+package com.chins.mall.backend.business.user.register;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServiceRegApplication {
+public class UserRegisterApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(ServiceRegApplication.class, args);
+    SpringApplication.run(UserRegisterApplication.class, args);
   }
 }

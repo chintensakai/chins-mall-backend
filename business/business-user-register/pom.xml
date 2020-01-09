@@ -3,15 +3,13 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <artifactId>service</artifactId>
+    <artifactId>business</artifactId>
     <groupId>com.chins.mall.backend</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>service-register</artifactId>
-  <packaging>jar</packaging>
-
+  <artifactId>business-user-register</artifactId>
 
   <dependencies>
     <dependency>
@@ -25,17 +23,34 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
 
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+      <artifactId>spring-cloud-alibaba-dubbo</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.apache.dubbo</groupId>
+      <artifactId>dubbo-registry-nacos</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-context</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-commons</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>com.chins.mall.backend</groupId>
-      <artifactId>ums-provider-api</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <artifactId>provider-user-mgr-api</artifactId>
+      <version>${project.parent.version}</version>
       <exclusions>
         <exclusion>
           <groupId>com.zaxxer</groupId>
@@ -43,22 +58,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <artifactId>commons-dto</artifactId>
-      <groupId>com.chins.mall.backend</groupId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
   </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <mainClass>com.chins.mall.backend.service.ServiceRegApplication</mainClass>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>

@@ -5,10 +5,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chins.mall.backend.provider.user.mgr.api.UserMgrApi;
 import com.chins.mall.backend.provider.user.mgr.domain.User;
 import com.chins.mall.backend.provider.user.mgr.mapper.UserMapper;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
+@Service(version = "1.0.0")
 public class UserMgrService extends ServiceImpl<UserMapper, User> implements UserMgrApi {
 
   @Autowired

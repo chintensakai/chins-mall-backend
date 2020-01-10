@@ -22,4 +22,14 @@ public class UserMgrService extends ServiceImpl<UserMapper, User> implements Use
 
     return user;
   }
+
+  @Override
+  public Long insertUser(User user) {
+    int insert = userMapper.insert(user);
+    if (insert > 0) {
+      return user.getId();
+    }
+
+    return Long.valueOf(-1);
+  }
 }

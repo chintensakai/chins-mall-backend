@@ -8,4 +8,6 @@ public interface UserMgrApi extends IService<User> {
   User selectOne(Long id);
 
   Long insertUser(User user);
+
+  User selectOne(String username);
 }

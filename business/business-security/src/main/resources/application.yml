@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: business-security
+#  datasource:
+#    jdbcUrl: jdbc:mysql://192.168.0.106:3306/oauth2?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    username: root
+#    password: 123456
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    type: com.zaxxer.hikari.HikariDataSource
+#    hikari:
+#      auto-commit: true
+#      minimum-idle: 2
+#      idle-timeout: 60000
+#      connection-timeout: 30000
+#      max-lifetime: 1800000
+#      pool-name: DatebookHikariCP
+#      maximum-pool-size: 5
+
+#mybatis-plus:
+#  type-aliases-package: com.chins.spring.cloud.alibaba.oauth.server.domain
+#  mapper-locations: classpath*:/mybatis/mapper/*.xml
+
+dubbo:
+  scan:
+    base-packages: com.chins.mall.backend.business.security.config
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+  registry:
+    protocol: nacos
+    address: 127.0.0.1
+    port: 8848
+  provider:
+    loadbalance: roundrobin # 轮询，默认随机

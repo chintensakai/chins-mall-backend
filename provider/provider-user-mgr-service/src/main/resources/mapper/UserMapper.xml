@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chins.mall.backend.provider.user.mgr.mapper.PermissionMapper">
+
+  <resultMap id="BaseResultMap"
+    type="com.chins.mall.backend.provider.user.mgr.domain.Permission">
+    <id column="id" jdbcType="BIGINT" property="id"></id>
+    <result column="parent_id" jdbcType="BIGINT" property="parentId"></result>
+    <result column="name" jdbcType="VARCHAR" property="name"></result>
+    <result column="description" jdbcType="VARCHAR" property="description"></result>
+    <result column="url" jdbcType="VARCHAR" property="url"></result>
+    <result column="enname" jdbcType="VARCHAR" property="enname"></result>
+    <result column="updated" jdbcType="TIMESTAMP" property="updated"></result>
+    <result column="created" jdbcType="TIMESTAMP" property="created"></result>
+
+  </resultMap>
+  <select id="selectListByUserId" resultMap="BaseResultMap">
+    select p.* from tb_user as u
+    left join tb_user_role as ur on u.id = ur.user_id
+    left join tb_role as r on r.id = ur.role_id
+    left join tb_role_permission as rp on r.id = rp.role_id
+    left join tb_permission as p on p.id = rp.permission_id
+    where u.id = #{userId};
+  </select>
+</mapper>

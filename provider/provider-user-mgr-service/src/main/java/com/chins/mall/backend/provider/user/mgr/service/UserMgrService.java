@@ -32,4 +32,13 @@ public class UserMgrService extends ServiceImpl<UserMapper, User> implements Use
 
     return Long.valueOf(-1);
   }
+
+  @Override
+  public User selectOne(String username) {
+
+    QueryWrapper queryWrapper = new QueryWrapper();
+    queryWrapper.eq("username", username);
+
+    return userMapper.selectOne(queryWrapper);
+  }
 }

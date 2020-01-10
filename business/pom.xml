@@ -13,6 +13,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>business-user-register</module>
+    <module>business-security</module>
   </modules>
 
   <dependencyManagement>

@@ -20,7 +20,7 @@ spring:
   application:
     name: provider-user-mgr
   datasource:
-    url: jdbc:mysql://192.168.0.106:3306/chinsmall_user_mgr?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://192.168.0.106:3306/oauth2?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -36,5 +36,5 @@ spring:
 
 mybatis-plus:
   type-aliases-package: com.chins.mall.backend.provider.user.mgr.domain
-  mapper-locations: classpath*:/mybatis/mapper/*.xml
+  mapper-locations: classpath*:/mapper/*.xml
 

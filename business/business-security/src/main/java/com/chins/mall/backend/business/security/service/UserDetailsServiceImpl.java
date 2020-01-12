@@ -1,4 +1,4 @@
-package com.chins.mall.backend.business.security.config;
+package com.chins.mall.backend.business.security.service;
 
 import com.chins.mall.backend.provider.user.mgr.api.PermissionMgrApi;
 import com.chins.mall.backend.provider.user.mgr.api.UserMgrApi;

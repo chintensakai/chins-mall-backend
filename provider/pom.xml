@@ -19,10 +19,9 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <artifactId>lombok</artifactId>
-        <groupId>org.projectlombok</groupId>
-        <scope>provided</scope>
-        <version>1.18.10</version>
+        <groupId>com.chins.mall.backend</groupId>
+        <artifactId>commons-dto</artifactId>
+        <version>${project.parent.version}</version>
       </dependency>
       <dependency>
         <artifactId>mybatis-plus-boot-starter</artifactId>

@@ -3,26 +3,19 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <artifactId>provider</artifactId>
+    <artifactId>commons</artifactId>
     <groupId>com.chins.mall.backend</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>provider-user-mgr-api</artifactId>
+  <artifactId>commons-dto</artifactId>
 
   <dependencies>
     <dependency>
-      <artifactId>commons-dto</artifactId>
-      <groupId>com.chins.mall.backend</groupId>
-    </dependency>
-    <dependency>
-      <artifactId>mybatis-plus-boot-starter</artifactId>
-      <groupId>com.baomidou</groupId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.dubbo</groupId>
-      <artifactId>dubbo-serialization-kryo</artifactId>
+      <artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
     </dependency>
   </dependencies>
+
 </project>

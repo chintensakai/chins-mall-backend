@@ -1,20 +1,29 @@
+server:
+  port: 8091
+
+business:
+  oauth2:
+    grant_type: password
+    client_id: client_id
+    client_secret: secret
+
 spring:
   application:
     name: business-security
-#  datasource:
-#    jdbcUrl: jdbc:mysql://192.168.0.106:3306/oauth2?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
-#    username: root
-#    password: 123456
-#    driverClassName: com.mysql.cj.jdbc.Driver
-#    type: com.zaxxer.hikari.HikariDataSource
-#    hikari:
-#      auto-commit: true
-#      minimum-idle: 2
-#      idle-timeout: 60000
-#      connection-timeout: 30000
-#      max-lifetime: 1800000
-#      pool-name: DatebookHikariCP
-#      maximum-pool-size: 5
+  datasource:
+    jdbcUrl: jdbc:mysql://192.168.0.106:3306/oauth2?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: true
+      minimum-idle: 2
+      idle-timeout: 60000
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      pool-name: DatebookHikariCP
+      maximum-pool-size: 5
 
 #mybatis-plus:
 #  type-aliases-package: com.chins.spring.cloud.alibaba.oauth.server.domain

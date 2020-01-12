@@ -1,6 +1,7 @@
 package com.chins.mall.backend.business.security.controller;
 
 import com.chins.mall.backend.business.security.dto.LoginParam;
+import com.chins.mall.backend.business.security.dto.LoginUserInfo;
 import com.chins.mall.backend.business.security.dto.TokenEntity;
 import com.chins.mall.backend.commons.dto.BaseStatusEnum;
 import com.chins.mall.backend.commons.dto.CommonsResponse;
@@ -9,8 +10,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -59,5 +63,21 @@ public class LoginController {
     }
     return new CommonsResponse(BaseStatusEnum.SUCCESS.getIndex(), BaseStatusEnum.SUCCESS.getMsg(),
         tokenEntity);
+  }
+
+  /***
+   * 根据token获取用户信息
+   * @return
+   */
+  @GetMapping("/user/info")
+  public CommonsResponse loginInfo() {
+    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+    String name = authentication.getName();
+
+    LoginUserInfo loginUserInfo = new LoginUserInfo();
+    loginUserInfo.setUsername(name);
+
+    return new CommonsResponse(BaseStatusEnum.SUCCESS.getIndex(), BaseStatusEnum.SUCCESS.getMsg(),
+        loginUserInfo);
   }
 }

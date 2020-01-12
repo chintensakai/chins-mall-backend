@@ -56,7 +56,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and()
         .authorizeRequests()
-        .antMatchers("/user/info").hasAnyAuthority("UserInfo");
+        .antMatchers("/user/info").hasAnyAuthority("UserInfo")
+        .antMatchers("/user/logout").hasAnyAuthority("UserLogout");
 
   }
 }

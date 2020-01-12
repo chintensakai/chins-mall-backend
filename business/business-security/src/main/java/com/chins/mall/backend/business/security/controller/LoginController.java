@@ -5,6 +5,7 @@ import com.chins.mall.backend.business.security.dto.LoginUserInfo;
 import com.chins.mall.backend.business.security.dto.TokenEntity;
 import com.chins.mall.backend.commons.dto.BaseStatusEnum;
 import com.chins.mall.backend.commons.dto.CommonsResponse;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -12,6 +13,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.common.OAuth2AccessToken;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +37,9 @@ public class LoginController {
 
   @Autowired
   private RestTemplate restTemplate;
+
+  @Autowired
+  private TokenStore tokenStore;
 
   @PostMapping("/user/login")
   public CommonsResponse login(@RequestBody LoginParam loginParam) {
@@ -79,5 +85,18 @@ public class LoginController {
 
     return new CommonsResponse(BaseStatusEnum.SUCCESS.getIndex(), BaseStatusEnum.SUCCESS.getMsg(),
         loginUserInfo);
+  }
+
+  /***
+   * 注销，删除tokenStore中的token
+   */
+  @PostMapping("/user/logout")
+  public CommonsResponse logout(HttpServletRequest request) {
+    String access_token = request.getParameter("access_token");
+    OAuth2AccessToken oAuth2AccessToken = tokenStore.readAccessToken(access_token);
+    tokenStore.removeAccessToken(oAuth2AccessToken);
+
+    return new CommonsResponse(BaseStatusEnum.SUCCESS.getIndex(), BaseStatusEnum.SUCCESS.getMsg(),
+        null);
   }
 }

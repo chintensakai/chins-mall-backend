@@ -21,6 +21,7 @@
     <module>provider</module>
     <module>business</module>
     <module>commons</module>
+    <module>gateway</module>
   </modules>
 
   <properties>

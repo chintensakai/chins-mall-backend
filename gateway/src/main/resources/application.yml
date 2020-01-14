@@ -1,0 +1,28 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      #      设置与服务注册发现组件结合，这样可以采用服务名的路由策略
+      discovery:
+        locator:
+          enable: true
+
+      routes:
+        - id: BUSINESS-OAUTH2
+          #          采用LoadBalanceClient方式请求，以lb://开头，后面跟注册在nacos上的服务名
+          uri: lb://business-security
+          #          断言，或者叫谓词
+          predicates:
+            - Path=/api/user/**
+          filters:
+#            前缀过滤，默认配置下，请求路径是http://localhost:9999/business-security/user/**，这时会路由到指定的服务
+#            此处配置去掉1个路径前缀，再配置上面的Path=/api/**，就能按照http://localhost:9999/api/**访问了
+            - StripPrefix=1

@@ -15,3 +15,5 @@
 /commons/commons.iml
 /commons/commons-dto/commons-dto.iml
 /commons/commons-dto/target/
+/gateway/gateway.iml
+/gateway/target/
